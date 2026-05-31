@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>HELPYARD-PS | Premium Custom Printing Bangladesh 🔥</title>
+<meta name="description" content="Bangladesh's #1 Premium Custom Printing — Sublimation, Vinyl, Inject Print. Sports Jersey, Corporate Branding, Mugs, Tiles & More."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+<style>
+/* ===== CSS VARIABLES ===== */
+:root{
+  --bg:#060f12;
+  --surface:#0b1d22;
+  --surface2:#102830;
+  --card:#0f252e;
+  --accent:#1fc6c0;
+  --accent2:#f5a623;
+  --accent3:#e8365d;
+  --text:#eaf6f7;
+  --muted:#7ab5bc;
+  --border:rgba(31,198,192,.15);
+  --nav-h:72px;
+  --ff-display:'Bebas Neue',sans-serif;
+  --ff-tech:'Orbitron',sans-serif;
+  --ff-body:'Hind Siliguri',sans-serif;
+  --shadow:0 8px 40px rgba(0,0,0,.45);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none}
+
+/* ===== CUSTOM CURSOR ===== */
+#cursor{
+  position:fixed;width:14px;height:14px;
+  background:var(--accent);border-radius:50%;
+  pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);
+  transition:transform .1s,width .2s,height .2s,background .2s;
+  mix-blend-mode:screen;
+}
+#cursor-ring{
+  position:fixed;width:38px;height:38px;
+  border:1.5px solid rgba(31,198,192,.5);border-radius:50%;
+  pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);
+  transition:transform .18s ease,width .25s,height .25s,border-color .2s;
+}
+body:hover #cursor{opacity:1}
+a:hover~#cursor,button:hover~#cursor{width:22px;height:22px;background:var(--accent2)}
+
+/* ===== ANIMATED BG GRID ===== */
+.grid-bg{
+  position:fixed;inset:0;z-index:0;
+  background-image:
+    linear-gradient(rgba(31,198,192,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(31,198,192,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  animation:gridDrift 30s linear infinite;
+}
+@keyframes gridDrift{0%{background-position:0 0}100%{background-position:60px 60px}}
+
+/* Radial glow blobs */
+.blob{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;animation:blobFloat 8s ease-in-out infinite}
+.blob1{width:500px;height:500px;background:rgba(31,198,192,.07);top:-10%;right:5%;animation-delay:0s}
+.blob2{width:400px;height:400px;background:rgba(245,166,35,.06);bottom:10%;left:-5%;animation-delay:3s}
+.blob3{width:300px;height:300px;background:rgba(232,54,93,.05);top:50%;right:30%;animation-delay:5s}
+@keyframes blobFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+
+section,nav,footer,canvas{position:relative;z-index:1}
+
+/* ===== PARTICLE CANVAS ===== */
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
+
+/* ===== TYPOGRAPHY ===== */
+h1,h2,h3,h4{font-family:var(--ff-display);letter-spacing:.04em}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent2)}
+
+/* ===== LOADING SCREEN ===== */
+#loader{
+  position:fixed;inset:0;z-index:100000;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;
+  transition:opacity .6s,visibility .6s;
+}
+#loader.hide{opacity:0;visibility:hidden}
+.loader-logo{font-family:var(--ff-display);font-size:3.5rem;letter-spacing:.12em;color:var(--text)}
+.loader-logo span{color:var(--accent)}
+.loader-bar{width:220px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
+.loader-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));animation:loadFill 2.2s ease forwards}
+@keyframes loadFill{0%{width:0}100%{width:100%}}
+.loader-text{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* ===== NAVBAR ===== */
+#mainNav{
+  background:rgba(6,15,18,.88);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+  height:var(--nav-h);
+  transition:background .3s,box-shadow .3s;
+}
+#mainNav.scrolled{background:rgba(6,15,18,.97);box-shadow:0 4px 40px rgba(0,0,0,.4)}
+.navbar-brand{font-family:var(--ff-display);font-size:1.75rem;letter-spacing:.1em;color:var(--text)!important;display:flex;align-items:center;gap:.6rem}
+.navbar-brand .brand-accent{color:var(--accent)}
+.navbar-brand .brand-sub{font-family:var(--ff-body);font-size:.6rem;font-weight:600;letter-spacing:.18em;color:var(--muted);display:block;text-transform:uppercase;line-height:1}
+.nav-link{color:var(--muted)!important;font-weight:500;font-size:.9rem;padding:.4rem .85rem!important;transition:color .2s;position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:.85rem;right:.85rem;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:center;transition:transform .25s}
+.nav-link:hover,.nav-link.active{color:var(--accent)!important}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+.btn-nav-cta{
+  background:linear-gradient(135deg,var(--accent),#13a09b);
+  color:var(--bg)!important;font-weight:800;font-size:.88rem;
+  padding:.44rem 1.3rem!important;border-radius:7px;
+  letter-spacing:.05em;transition:all .2s;
+  display:flex;align-items:center;gap:.5rem;
+  animation:navPulse 3s ease-in-out infinite;
+}
+@keyframes navPulse{0%,100%{box-shadow:0 0 0 0 rgba(31,198,192,.3)}50%{box-shadow:0 0 0 8px rgba(31,198,192,0)}}
+.btn-nav-cta:hover{opacity:.9;transform:translateY(-2px);color:var(--bg)!important}
+.navbar-toggler{border-color:var(--border)}
+.navbar-toggler-icon{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%231fc6c0' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")}
+
+/* Announcement ticker */
+.ticker-wrap{
+  background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3),var(--accent));
+  background-size:300% 100%;
+  animation:tickerBg 5s linear infinite;
+  height:34px;display:flex;align-items:center;overflow:hidden;
+}
+@keyframes tickerBg{0%{background-position:0%}100%{background-position:300%}}
+.ticker-inner{display:flex;animation:tickerScroll 28s linear infinite;white-space:nowrap}
+.ticker-inner span{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);padding:0 3rem}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== HERO ===== */
+#hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:calc(var(--nav-h) + 34px);
+  overflow:hidden;
+}
+
+/* Typewriter effect */
+.typewriter-wrap{display:inline-block}
+.typewriter{border-right:3px solid var(--accent);animation:blink .75s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.65rem;
+  background:rgba(31,198,192,.08);border:1px solid rgba(31,198,192,.25);
+  border-radius:100px;padding:.38rem 1.1rem;
+  font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:1.5rem;
+  animation:eyebrowPop .6s cubic-bezier(.34,1.56,.64,1) .3s both;
+}
+@keyframes eyebrowPop{from{opacity:0;transform:scale(.8) translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow-dot{width:7px;height:7px;background:var(--accent2);border-radius:50%;animation:dotPulse 1.5s ease-in-out infinite}
+@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.6)}}
+
+.hero-title{font-size:clamp(3.2rem,9vw,7rem);line-height:.95;margin-bottom:1.1rem;animation:titleReveal .8s ease .5s both}
+@keyframes titleReveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.hero-title .hl-accent{color:var(--accent);display:block}
+.hero-title .hl-amber{color:var(--accent2);display:block}
+
+.hero-bn{
+  font-size:clamp(1rem,2.2vw,1.25rem);color:var(--muted);
+  max-width:520px;margin-bottom:2.3rem;line-height:1.8;
+  animation:fadeUp .7s ease .7s both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+.btn-primary-glow{
+  background:linear-gradient(135deg,var(--accent) 0%,#13a09b 100%);
+  color:var(--bg);font-weight:800;font-size:1rem;
+  padding:.85rem 2.2rem;border-radius:10px;border:none;
+  display:inline-flex;align-items:center;gap:.7rem;
+  box-shadow:0 4px 24px rgba(31,198,192,.35),0 0 0 0 rgba(31,198,192,.4);
+  animation:pulseGlow 2.5s ease-in-out infinite;
+  transition:transform .2s,box-shadow .2s;
+}
+@keyframes pulseGlow{
+  0%,100%{box-shadow:0 4px 24px rgba(31,198,192,.35),0 0 0 0 rgba(31,198,192,.3)}
+  50%{box-shadow:0 4px 24px rgba(31,198,192,.55),0 0 0 14px rgba(31,198,192,0)}
+}
+.btn-primary-glow:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(31,198,192,.5);color:var(--bg)}
+.btn-outline-glow{
+  background:transparent;color:var(--text);font-weight:600;font-size:1rem;
+  padding:.83rem 2rem;border-radius:10px;
+  border:1.5px solid rgba(31,198,192,.3);
+  display:inline-flex;align-items:center;gap:.7rem;
+  transition:all .25s;
+}
+.btn-outline-glow:hover{border-color:var(--accent);color:var(--accent);background:rgba(31,198,192,.07);transform:translateY(-2px)}
+
+/* Hero stats */
+.stat-bar{
+  display:flex;gap:2.8rem;flex-wrap:wrap;
+  margin-top:3rem;padding-top:2rem;
+  border-top:1px solid var(--border);
+  animation:fadeUp .7s ease 1s both;
+}
+.stat-val{font-family:var(--ff-display);font-size:2.6rem;color:var(--accent);line-height:1;display:block}
+.stat-key{font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-top:.2rem}
+
+/* ===== HERO SVG VISUAL — Animated Print Machine ===== */
+.hero-svg-wrap{
+  position:relative;display:flex;align-items:center;justify-content:center;
+}
+.hero-svg-wrap svg{filter:drop-shadow(0 0 30px rgba(31,198,192,.2))}
+
+/* ===== MARQUEE CLIENTS STRIP ===== */
+.marquee-section{
+  background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:1.1rem 0;overflow:hidden;
+}
+.marquee-track{display:flex;animation:marqueeScroll 22s linear infinite;white-space:nowrap}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{
+  display:inline-flex;align-items:center;gap:.65rem;
+  padding:0 2.2rem;font-size:.82rem;font-weight:700;
+  color:var(--muted);letter-spacing:.1em;text-transform:uppercase;
+  border-right:1px solid var(--border);
+}
+.marquee-item i{color:var(--accent);font-size:1.05rem}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== SECTION SHARED ===== */
+.sec-pad{padding:100px 0 90px}
+.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);margin-bottom:.5rem}
+.sec-title{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;margin-bottom:1.2rem}
+.divider{width:54px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:1rem 0 1.6rem}
+.sec-sub{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.75}
+
+/* ===== SERVICES ===== */
+#services{background:var(--surface)}
+
+/* Animated 3D card tilt */
+.tilt-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:2.2rem 2rem;height:100%;
+  transition:border-color .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.tilt-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(31,198,192,.08) 0%,transparent 65%);
+  opacity:0;transition:opacity .3s;border-radius:inherit;
+}
+.tilt-card:hover::before{opacity:1}
+.tilt-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.tilt-card:hover{border-color:rgba(31,198,192,.45);box-shadow:0 16px 50px rgba(0,0,0,.4),0 0 40px rgba(31,198,192,.08)}
+.tilt-card:hover::after{transform:scaleX(1)}
+
+.svc-icon-wrap{
+  width:60px;height:60px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(31,198,192,.15),rgba(31,198,192,.03));
+  border:1px solid rgba(31,198,192,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;margin-bottom:1.3rem;
+  transition:transform .3s;
+}
+.tilt-card:hover .svc-icon-wrap{transform:rotate(-8deg) scale(1.1)}
+.svc-title{font-size:1.65rem;margin-bottom:.3rem}
+.svc-bn{font-family:var(--ff-body);font-size:.85rem;color:var(--accent2);font-weight:600;margin-bottom:.8rem}
+.svc-desc{font-size:.92rem;color:var(--muted);line-height:1.7}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+.tag{background:rgba(31,198,192,.07);border:1px solid rgba(31,198,192,.2);border-radius:100px;padding:.22rem .8rem;font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.05em;transition:background .2s,color .2s}
+.tag:hover{background:rgba(31,198,192,.18);color:var(--text)}
+
+/* ===== PROCESS / HOW IT WORKS ===== */
+#process{background:var(--bg)}
+.process-line{
+  position:relative;
+}
+.process-line::before{
+  content:'';position:absolute;
+  top:40px;left:calc(50% - .5px);
+  width:1px;height:calc(100% - 40px);
+  background:linear-gradient(to bottom,var(--accent),transparent);
+}
+.step-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:1.8rem 1.6rem;
+  position:relative;transition:transform .25s,border-color .25s;
+  display:flex;gap:1.2rem;align-items:flex-start;
+}
+.step-card:hover{transform:translateX(6px);border-color:rgba(31,198,192,.35)}
+.step-num{
+  flex-shrink:0;width:48px;height:48px;
+  border-radius:12px;background:linear-gradient(135deg,var(--accent),#13a09b);
+  color:var(--bg);font-family:var(--ff-display);font-size:1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(31,198,192,.3);
+}
+.step-card h5{font-family:var(--ff-body);font-weight:700;font-size:1rem;margin-bottom:.3rem}
+.step-card p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.6}
+
+/* ===== PRODUCT SHOWCASE GRID ===== */
+#products{background:var(--surface)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+.product-pill{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:1.1rem 1rem;
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  text-align:center;font-size:.82rem;font-weight:600;color:var(--text);
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+  cursor:default;
+}
+.product-pill:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.product-pill .pp-emoji{font-size:2rem;filter:drop-shadow(0 2px 8px rgba(31,198,192,.3));transition:transform .3s}
+.product-pill:hover .pp-emoji{transform:scale(1.2) rotate(-5deg)}
+.product-pill .pp-label{font-size:.78rem;color:var(--muted)}
+
+/* ===== WHY US ===== */
+#why{background:var(--bg)}
+.why-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:1.6rem;
+  display:flex;gap:1.1rem;align-items:flex-start;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.why-card:hover{border-color:rgba(31,198,192,.4);transform:translateY(-4px);box-shadow:0 10px 35px rgba(0,0,0,.3)}
+.why-icon{
+  flex-shrink:0;width:46px;height:46px;border-radius:11px;
+  background:linear-gradient(135deg,var(--accent),#13a09b);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.25rem;color:var(--bg);
+  box-shadow:0 4px 16px rgba(31,198,192,.25);
+}
+.why-card h5{font-family:var(--ff-body);font-weight:700;font-size:.98rem;margin-bottom:.3rem}
+.why-card p{font-size:.86rem;color:var(--muted);margin:0;line-height:1.6}
+
+/* ===== COUNTER SECTION ===== */
+#counters{
+  background:linear-gradient(135deg,rgba(31,198,192,.07),rgba(245,166,35,.04));
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.counter-item{text-align:center;padding:2.5rem 1rem}
+.counter-num{font-family:var(--ff-display);font-size:clamp(3rem,6vw,5rem);color:var(--accent);line-height:1;display:block}
+.counter-suffix{color:var(--accent2)}
+.counter-label{font-size:.85rem;font-weight:600;color:var(--muted);margin-top:.5rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ===== TESTIMONIALS ===== */
+#testimonials{background:var(--surface)}
+.testimonial-track-wrap{overflow:hidden;position:relative}
+.testimonial-track{display:flex;gap:1.5rem;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.t-card{
+  min-width:320px;background:var(--card);
+  border:1px solid var(--border);border-radius:14px;padding:1.8rem 1.6rem;
+  flex-shrink:0;
+}
+.t-stars{color:var(--accent2);font-size:.95rem;margin-bottom:.9rem;letter-spacing:.1rem}
+.t-text{font-size:.92rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:1.1rem}
+.t-text strong{color:var(--text);font-style:normal}
+.t-author{display:flex;align-items:center;gap:.8rem}
+.t-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:.9rem;color:var(--bg);
+  font-family:var(--ff-display);
+}
+.t-name{font-weight:700;font-size:.9rem}
+.t-role{font-size:.75rem;color:var(--muted)}
+.slider-dots{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.s-dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.s-dot.active{background:var(--accent);transform:scale(1.3)}
+.slider-arrows{display:flex;gap:.8rem;justify-content:center;margin-top:1rem}
+.s-arrow{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,color .2s}
+.s-arrow:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== ABOUT ===== */
+#about{background:var(--bg)}
+.about-quote{
+  background:linear-gradient(135deg,rgba(31,198,192,.07),rgba(245,166,35,.04));
+  border-left:3px solid var(--accent);border-radius:0 12px 12px 0;
+  padding:1.4rem 1.8rem;font-size:1.05rem;font-style:italic;
+  color:var(--muted);margin:1.8rem 0;line-height:1.7;
+}
+.about-quote strong{color:var(--text);font-style:normal}
+.badge-pill{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(31,198,192,.08);border:1px solid var(--border);
+  border-radius:100px;padding:.38rem 1rem;
+  font-size:.82rem;font-weight:600;color:var(--text);margin:.3rem;
+  transition:border-color .2s,background .2s;
+}
+.badge-pill:hover{border-color:var(--accent);background:rgba(31,198,192,.14)}
+.badge-pill i{color:var(--accent2)}
+
+/* Rotating ring visual */
+.about-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px}
+.ring-outer{
+  width:280px;height:280px;border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;animation:ringPulse 4s ease-in-out infinite;
+}
+@keyframes ringPulse{0%,100%{box-shadow:0 0 0 0 rgba(31,198,192,.08),0 0 50px rgba(31,198,192,.07)}50%{box-shadow:0 0 0 22px rgba(31,198,192,.03),0 0 80px rgba(31,198,192,.12)}}
+.ring-orbit{
+  position:absolute;inset:-28px;border-radius:50%;
+  border:1px dashed rgba(31,198,192,.18);
+  animation:orbit 18s linear infinite;
+}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.orbit-dot{
+  position:absolute;top:4px;left:50%;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 12px var(--accent);
+}
+.ring-inner{
+  width:170px;height:170px;border-radius:50%;
+  background:linear-gradient(145deg,var(--surface2),var(--card));
+  border:2px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:inset 0 2px 20px rgba(0,0,0,.3),0 8px 40px rgba(0,0,0,.4);
+}
+.ring-label{font-family:var(--ff-display);font-size:1.8rem;color:var(--accent);letter-spacing:.1em}
+.ring-sub{font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* Floating orbit items */
+.float-item{
+  position:absolute;background:var(--card);border:1px solid var(--border);
+  border-radius:10px;padding:.5rem .9rem;
+  font-size:.74rem;font-weight:700;color:var(--text);
+  display:flex;align-items:center;gap:.4rem;
+  box-shadow:var(--shadow);
+  animation:floatY 3s ease-in-out infinite;
+}
+.float-item i{color:var(--accent2)}
+.fi1{top:0;right:-18%;animation-delay:0s}
+.fi2{bottom:5%;left:-16%;animation-delay:1.2s}
+.fi3{top:45%;right:-20%;animation-delay:2s}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ===== CONTACT ===== */
+#contact{background:var(--surface)}
+.contact-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:2.2rem 2rem;height:100%;
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+}
+.contact-card:hover{border-color:rgba(31,198,192,.4);transform:translateY(-6px);box-shadow:0 14px 45px rgba(0,0,0,.35)}
+.cc-icon{
+  width:56px;height:56px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:1.2rem;
+}
+.cc-wa{background:rgba(37,211,102,.1);color:#25d366;border:1px solid rgba(37,211,102,.2)}
+.cc-em{background:rgba(31,198,192,.1);color:var(--accent);border:1px solid rgba(31,198,192,.2)}
+.cc-or{background:rgba(245,166,35,.1);color:var(--accent2);border:1px solid rgba(245,166,35,.2)}
+.contact-card h5{font-family:var(--ff-display);font-size:1.7rem;margin-bottom:.2rem}
+.cc-bn{font-size:.82rem;color:var(--accent2);font-weight:600;margin-bottom:.8rem}
+.contact-card p{font-size:.9rem;color:var(--muted);line-height:1.6;margin-bottom:.8rem}
+.cc-link{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;font-size:.93rem;transition:gap .18s}
+.cc-link:hover{gap:.9rem}
+
+/* Order form panel */
+.order-panel{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:18px;padding:2.8rem 2.5rem;
+}
+.order-panel h3{font-size:2.2rem;margin-bottom:.4rem}
+.form-control-dark{
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+  color:var(--text);border-radius:9px;padding:.75rem 1rem;
+  font-family:var(--ff-body);font-size:.93rem;
+  transition:border-color .2s,box-shadow .2s;
+  width:100%;
+}
+.form-control-dark:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,198,192,.12);background:rgba(255,255,255,.06)}
+.form-control-dark::placeholder{color:var(--muted)}
+textarea.form-control-dark{resize:vertical;min-height:110px}
+select.form-control-dark option{background:var(--card);color:var(--text)}
+.form-label{font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:.4rem;display:block;letter-spacing:.06em;text-transform:uppercase}
+
+/* CTA Banner */
+.cta-banner{
+  background:linear-gradient(135deg,rgba(31,198,192,.1),rgba(245,166,35,.07));
+  border:1px solid var(--border);border-radius:20px;
+  padding:4rem 2.5rem;text-align:center;margin-top:4rem;
+  position:relative;overflow:hidden;
+}
+.cta-banner::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(31,198,192,.07) 0%,transparent 70%);
+}
+.cta-banner h3{font-size:clamp(2.2rem,4.5vw,3.5rem);position:relative;z-index:1;margin-bottom:.8rem}
+.cta-banner p{color:var(--muted);max-width:520px;margin:0 auto 2.2rem;font-size:1rem;position:relative;z-index:1}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.wa-float{
+  position:fixed;bottom:5.5rem;right:1.8rem;
+  width:56px;height:56px;border-radius:50%;
+  background:#25d366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;z-index:999;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  animation:waFloat 2.5s ease-in-out infinite;
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.1);color:#fff}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.wa-tooltip{
+  position:absolute;right:70px;top:50%;transform:translateY(-50%);
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:.4rem .9rem;
+  font-size:.76rem;font-weight:700;color:var(--text);
+  white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* ===== BACK TO TOP ===== */
+#backTop{
+  position:fixed;bottom:1.8rem;right:1.8rem;
+  width:44px;height:44px;border-radius:10px;
+  background:var(--accent);color:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;z-index:998;
+  box-shadow:0 4px 18px rgba(31,198,192,.35);
+  opacity:0;pointer-events:none;
+  transition:opacity .3s,transform .2s;
+}
+#backTop.show{opacity:1;pointer-events:all}
+#backTop:hover{transform:translateY(-4px);color:var(--bg)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem 0 1.8rem;font-size:.87rem;color:var(--muted)}
+.footer-brand{font-family:var(--ff-display);font-size:1.7rem;color:var(--text);letter-spacing:.1em}
+.footer-brand span{color:var(--accent)}
+.footer-links a{color:var(--muted);display:block;margin-bottom:.4rem;transition:color .2s,padding-left .2s}
+.footer-links a:hover{color:var(--accent);padding-left:4px}
+.social-btn{
+  width:38px;height:38px;border-radius:9px;border:1px solid var(--border);
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--muted);margin-right:.4rem;transition:all .2s;
+}
+.social-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(31,198,192,.08)}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
+.reveal-l{opacity:0;transform:translateX(-32px);transition:opacity .65s ease,transform .65s ease}
+.reveal-r{opacity:0;transform:translateX(32px);transition:opacity .65s ease,transform .65s ease}
+.reveal.on,.reveal-l.on,.reveal-r.on{opacity:1;transform:none}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:991px){
+  .float-item{display:none}
+  .process-line::before{display:none}
+}
+@media(max-width:767px){
+  .sec-pad{padding:70px 0 60px}
+  .btn-primary-glow,.btn-outline-glow{font-size:.9rem;padding:.75rem 1.6rem}
+  .t-card{min-width:280px}
+  body{cursor:auto}
+  #cursor,#cursor-ring{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader">
+  <div class="loader-logo"><span>HELP</span>YARD-PS</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <div class="loader-text">লোড হচ্ছে... Loading Premium Experience</div>
+</div>
+
+<!-- ===== CUSTOM CURSOR ===== -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ===== BACKGROUND EFFECTS ===== -->
+<div class="grid-bg"></div>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<canvas id="particles"></canvas>
+
+<!-- ===== ANNOUNCEMENT TICKER ===== -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>🔥 Premium Custom Printing Bangladesh</span>
+    <span>✅ Sublimation · Vinyl · Inject Print</span>
+    <span>📦 Fast Delivery Guaranteed</span>
+    <span>🎨 100% Custom Design</span>
+    <span>📞 01773-743025</span>
+    <span>💯 Professional Quality Assured</span>
+    <span>🏆 দ্রুত, নির্ভরযোগ্য, প্রিমিয়াম সেবা</span>
+    <span>🔥 Premium Custom Printing Bangladesh</span>
+    <span>✅ Sublimation · Vinyl · Inject Print</span>
+    <span>📦 Fast Delivery Guaranteed</span>
+    <span>🎨 100% Custom Design</span>
+    <span>📞 01773-743025</span>
+    <span>💯 Professional Quality Assured</span>
+    <span>🏆 দ্রুত, নির্ভরযোগ্য, প্রিমিয়াম সেবা</span>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top" style="top:34px">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-accent">HELP</span>YARD
+      <div><span class="brand-sub">Premium Printing · BD</span></div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCol">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navCol">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="nav-link btn-nav-cta" href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> Order Now
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5 py-5">
+
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          Bangladesh's #1 Custom Print Studio
+        </div>
+
+        <h1 class="hero-title">
+          TURN YOUR
+          <span class="hl-accent typewriter-wrap">
+            <span id="typewriter" class="typewriter">VISION</span>
+          </span>
+          <span class="hl-amber">INTO PRINT</span>
+        </h1>
+
+        <p class="hero-bn">
+          আপনার ভাবনাকে বাস্তবে রূপ দিন HELPYARD-PS-এর সাথে। চোখ ধাঁধানো স্পোর্টস জার্সি থেকে কর্পোরেট ব্র্যান্ড ভিজ্যুয়াল — প্রিমিয়াম কোয়ালিটি, দ্রুত ডেলিভারি, ১০০% কাস্টম।
+        </p>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-primary-glow">
+            <i class="bi bi-whatsapp"></i> অর্ডার করুন / Order Now
+          </a>
+          <a href="#services" class="btn-outline-glow">
+            <i class="bi bi-grid-3x3-gap"></i> আমাদের সেবা
+          </a>
+        </div>
+
+        <div class="stat-bar">
+          <div>
+            <span class="stat-val counter-animate" data-target="500">0</span><span style="font-family:var(--ff-display);font-size:2.6rem;color:var(--accent2)">+</span>
+            <div class="stat-key">Happy Clients</div>
+          </div>
+          <div>
+            <span class="stat-val counter-animate" data-target="15">0</span><span style="font-family:var(--ff-display);font-size:2.6rem;color:var(--accent2)">+</span>
+            <div class="stat-key">Product Types</div>
+          </div>
+          <div>
+            <span class="stat-val counter-animate" data-target="3">0</span><span style="font-family:var(--ff-display);font-size:2.6rem;color:var(--accent2)">+</span>
+            <div class="stat-key">Print Methods</div>
+          </div>
+          <div>
+            <span class="stat-val">100</span><span style="font-family:var(--ff-display);font-size:2.6rem;color:var(--accent2)">%</span>
+            <div class="stat-key">Custom Design</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: SVG Animated Illustration -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="hero-svg-wrap">
+          <svg width="480" height="440" viewBox="0 0 480 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1fc6c0" stop-opacity=".18"/>
+                <stop offset="100%" stop-color="#1fc6c0" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="lgAccent" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1fc6c0"/>
+                <stop offset="100%" stop-color="#f5a623"/>
+              </linearGradient>
+              <filter id="gf" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="3"/>
+              </filter>
+            </defs>
+
+            <!-- Background glow -->
+            <ellipse cx="240" cy="220" rx="200" ry="180" fill="url(#glow1)"/>
+
+            <!-- Outer ring -->
+            <circle cx="240" cy="220" r="190" stroke="rgba(31,198,192,.1)" stroke-width="1" fill="none" stroke-dasharray="8 12">
+              <animateTransform attributeName="transform" type="rotate" from="0 240 220" to="360 240 220" dur="30s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Middle ring -->
+            <circle cx="240" cy="220" r="155" stroke="rgba(31,198,192,.15)" stroke-width="1.5" fill="none">
+              <animateTransform attributeName="transform" type="rotate" from="360 240 220" to="0 240 220" dur="20s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Main machine body -->
+            <rect x="120" y="155" width="240" height="140" rx="16" fill="#0f252e" stroke="rgba(31,198,192,.35)" stroke-width="1.5"/>
+            <!-- Screen -->
+            <rect x="140" y="172" width="140" height="80" rx="8" fill="#060f12" stroke="rgba(31,198,192,.25)" stroke-width="1"/>
+            <!-- Screen glow animated lines -->
+            <rect x="152" y="183" width="80" height="3" rx="1.5" fill="#1fc6c0" opacity=".7">
+              <animate attributeName="width" values="80;110;80" dur="2s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="152" y="193" width="60" height="3" rx="1.5" fill="#f5a623" opacity=".6">
+              <animate attributeName="width" values="60;90;60" dur="2.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="152" y="203" width="100" height="3" rx="1.5" fill="#1fc6c0" opacity=".5">
+              <animate attributeName="width" values="100;70;100" dur="1.8s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="152" y="213" width="50" height="3" rx="1.5" fill="#e8365d" opacity=".5">
+              <animate attributeName="width" values="50;80;50" dur="3s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="152" y="223" width="75" height="3" rx="1.5" fill="#1fc6c0" opacity=".4">
+              <animate attributeName="width" values="75;45;75" dur="2.2s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Control buttons right side -->
+            <circle cx="320" cy="190" r="8" fill="#1fc6c0" opacity=".8">
+              <animate attributeName="opacity" values=".8;.3;.8" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="340" cy="190" r="8" fill="#f5a623" opacity=".8">
+              <animate attributeName="opacity" values=".8;.3;.8" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="320" cy="210" r="8" fill="#e8365d" opacity=".8">
+              <animate attributeName="opacity" values=".8;.3;.8" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <rect x="306" y="224" width="48" height="26" rx="6" fill="url(#lgAccent)" opacity=".85"/>
+            <text x="330" y="241" text-anchor="middle" font-family="'Bebas Neue'" font-size="11" fill="#060f12">PRINT</text>
+
+            <!-- Print head rail + moving head -->
+            <rect x="130" y="310" width="220" height="6" rx="3" fill="#102830" stroke="rgba(31,198,192,.2)" stroke-width="1"/>
+            <g>
+              <rect x="155" y="302" width="36" height="20" rx="5" fill="#1fc6c0" opacity=".9"/>
+              <rect x="163" y="310" width="20" height="4" rx="2" fill="#060f12"/>
+              <animateTransform attributeName="transform" type="translate" values="0 0;170 0;0 0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+            </g>
+
+            <!-- Paper / output strip -->
+            <rect x="160" y="322" width="160" height="18" rx="4" fill="#0b1d22" stroke="rgba(31,198,192,.2)" stroke-width="1"/>
+            <!-- Animated color stripe on paper -->
+            <rect x="168" y="326" width="0" height="10" rx="2" fill="url(#lgAccent)" opacity=".8">
+              <animate attributeName="width" values="0;144;0" dur="3s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Floating product icons around machine -->
+            <!-- Mug -->
+            <g transform="translate(50,140)">
+              <rect x="0" y="0" width="54" height="46" rx="10" fill="#0f252e" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+              <text x="27" y="29" text-anchor="middle" font-size="20">☕</text>
+              <text x="27" y="43" text-anchor="middle" font-family="'Hind Siliguri'" font-size="8" fill="#7ab5bc">Mug</text>
+              <animateTransform attributeName="transform" type="translate" from="50,140" to="50,125" dur="2.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" values="50,140;50,125;50,140"/>
+            </g>
+
+            <!-- Jersey -->
+            <g transform="translate(376,130)">
+              <rect x="0" y="0" width="54" height="46" rx="10" fill="#0f252e" stroke="rgba(31,198,192,.3)" stroke-width="1"/>
+              <text x="27" y="29" text-anchor="middle" font-size="20">👕</text>
+              <text x="27" y="43" text-anchor="middle" font-family="'Hind Siliguri'" font-size="8" fill="#7ab5bc">Jersey</text>
+              <animateTransform attributeName="transform" type="translate" from="376,130" to="376,115" dur="3.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" values="376,130;376,115;376,130"/>
+            </g>
+
+            <!-- Tile -->
+            <g transform="translate(46,280)">
+              <rect x="0" y="0" width="54" height="46" rx="10" fill="#0f252e" stroke="rgba(232,54,93,.25)" stroke-width="1"/>
+              <text x="27" y="29" text-anchor="middle" font-size="20">🟦</text>
+              <text x="27" y="43" text-anchor="middle" font-family="'Hind Siliguri'" font-size="8" fill="#7ab5bc">Tile</text>
+              <animateTransform attributeName="transform" type="translate" from="46,280" to="46,265" dur="3.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" values="46,280;46,265;46,280"/>
+            </g>
+
+            <!-- Sticker -->
+            <g transform="translate(378,275)">
+              <rect x="0" y="0" width="54" height="46" rx="10" fill="#0f252e" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+              <text x="27" y="29" text-anchor="middle" font-size="20">🎨</text>
+              <text x="27" y="43" text-anchor="middle" font-family="'Hind Siliguri'" font-size="8" fill="#7ab5bc">Sticker</text>
+              <animateTransform attributeName="transform" type="translate" from="378,275" to="378,260" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1" values="378,275;378,260;378,275"/>
+            </g>
+
+            <!-- Center badge -->
+            <text x="240" y="84" text-anchor="middle" font-family="'Bebas Neue'" font-size="22" fill="#1fc6c0" letter-spacing="4" opacity=".8">HELPYARD-PS</text>
+            <text x="240" y="100" text-anchor="middle" font-family="'Hind Siliguri'" font-size="9" fill="#7ab5bc" letter-spacing="2">PREMIUM PRINTING SOLUTIONS</text>
+
+            <!-- Bottom tagline -->
+            <text x="240" y="415" text-anchor="middle" font-family="'Hind Siliguri'" font-size="10" fill="#7ab5bc">আপনার স্বপ্নকে বাস্তবে রূপ দিই</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE STRIP ===== -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item"><i class="bi bi-printer-fill"></i> Sublimation Print</div>
+    <div class="marquee-item"><i class="bi bi-scissors"></i> Vinyl Plotter</div>
+    <div class="marquee-item"><i class="bi bi-droplet-fill"></i> Inject Print</div>
+    <div class="marquee-item"><i class="bi bi-trophy-fill"></i> Sports Jersey</div>
+    <div class="marquee-item"><i class="bi bi-cup-hot-fill"></i> Ceramic Mugs</div>
+    <div class="marquee-item"><i class="bi bi-house-fill"></i> Tiles & Coasters</div>
+    <div class="marquee-item"><i class="bi bi-briefcase-fill"></i> Corporate Branding</div>
+    <div class="marquee-item"><i class="bi bi-gift-fill"></i> Custom Gifts</div>
+    <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> Premium Quality</div>
+    <div class="marquee-item"><i class="bi bi-lightning-fill"></i> Fast Delivery</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><i class="bi bi-printer-fill"></i> Sublimation Print</div>
+    <div class="marquee-item"><i class="bi bi-scissors"></i> Vinyl Plotter</div>
+    <div class="marquee-item"><i class="bi bi-droplet-fill"></i> Inject Print</div>
+    <div class="marquee-item"><i class="bi bi-trophy-fill"></i> Sports Jersey</div>
+    <div class="marquee-item"><i class="bi bi-cup-hot-fill"></i> Ceramic Mugs</div>
+    <div class="marquee-item"><i class="bi bi-house-fill"></i> Tiles & Coasters</div>
+    <div class="marquee-item"><i class="bi bi-briefcase-fill"></i> Corporate Branding</div>
+    <div class="marquee-item"><i class="bi bi-gift-fill"></i> Custom Gifts</div>
+    <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> Premium Quality</div>
+    <div class="marquee-item"><i class="bi bi-lightning-fill"></i> Fast Delivery</div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="sec-pad">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label">আমাদের সেবাসমূহ</div>
+      <h2 class="sec-title">Our <span style="color:var(--accent)">Printing</span> Services</h2>
+      <div class="divider mx-auto"></div>
+      <p class="sec-sub mx-auto">তিনটি শক্তিশালী পদ্ধতিতে যেকোনো উপকরণে আপনার ডিজাইন জীবন্ত করি।</p>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-lg-4 reveal" style="transition-delay:.1s">
+        <div class="tilt-card">
+          <div class="svc-icon-wrap">🖨️</div>
+          <div class="svc-title">Vinyl Plotter</div>
+          <div class="svc-bn">ভিনাইল প্লটার প্রিন্টিং</div>
+          <p class="svc-desc">Precision heat-transfer vinyl cutting on cotton fabrics. Crisp edges, vivid colors, lasting durability — ideal for jerseys, uniforms, and branded apparel.</p>
+          <div class="tag-cloud">
+            <span class="tag">Cotton Fabrics</span>
+            <span class="tag">All Sizes</span>
+            <span class="tag">Heat Transfer</span>
+            <span class="tag">Durable</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 reveal" style="transition-delay:.2s">
+        <div class="tilt-card">
+          <div class="svc-icon-wrap">👕</div>
+          <div class="svc-title">Inject Print</div>
+          <div class="svc-bn">ইনজেক্ট প্রিন্ট</div>
+          <p class="svc-desc">Professional inkjet DTF printing for dark fabrics and premium stickers. Full-color boldness that survives repeated washing and heavy use.</p>
+          <div class="tag-cloud">
+            <span class="tag">T-Shirt</span>
+            <span class="tag">Hoodie</span>
+            <span class="tag">Dark Fabrics</span>
+            <span class="tag">Sticker</span>
+            <span class="tag">DTF</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 reveal" style="transition-delay:.3s">
+        <div class="tilt-card">
+          <div class="svc-icon-wrap">🎨</div>
+          <div class="svc-title">Sublimation Print</div>
+          <div class="svc-bn">সাবলিমেশন প্রিন্ট</div>
+          <p class="svc-desc">Photo-quality, fade-proof sublimation on the widest range of hard and soft surfaces. From corporate gifts to home décor — flawless every time.</p>
+          <div class="tag-cloud">
+            <span class="tag">Ceramic Mugs</span>
+            <span class="tag">Tiles</span>
+            <span class="tag">MDF Coasters</span>
+            <span class="tag">Glass</span>
+            <span class="tag">Aluminium</span>
+            <span class="tag">Mouse Mats</span>
+            <span class="tag">Cushion Covers</span>
+            <span class="tag">Aprons</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCT SHOWCASE ===== -->
+<section id="products" class="sec-pad">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label">পণ্য তালিকা</div>
+      <h2 class="sec-title">All <span style="color:var(--accent2)">Products</span> We Print On</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="product-grid reveal">
+      <div class="product-pill"><span class="pp-emoji">☕</span> Ceramic Mug <span class="pp-label">সিরামিক মগ</span></div>
+      <div class="product-pill"><span class="pp-emoji">🟦</span> Ceramic Tile <span class="pp-label">সিরামিক টাইলস</span></div>
+      <div class="product-pill"><span class="pp-emoji">🟫</span> MDF Coaster <span class="pp-label">কোস্টার</span></div>
+      <div class="product-pill"><span class="pp-emoji">🔲</span> Glass Sheet <span class="pp-label">গ্লাস শিট</span></div>
+      <div class="product-pill"><span class="pp-emoji">🥈</span> Aluminium <span class="pp-label">অ্যালুমিনিয়াম</span></div>
+      <div class="product-pill"><span class="pp-emoji">🖱️</span> Mouse Mat <span class="pp-label">মাউস ম্যাট</span></div>
+      <div class="product-pill"><span class="pp-emoji">🛋️</span> Cushion Cover <span class="pp-label">কুশন কভার</span></div>
+      <div class="product-pill"><span class="pp-emoji">👔</span> Apron <span class="pp-label">এপ্রন</span></div>
+      <div class="product-pill"><span class="pp-emoji">👕</span> T-Shirt <span class="pp-label">টি-শার্ট</span></div>
+      <div class="product-pill"><span class="pp-emoji">🧥</span> Hoodie <span class="pp-label">হুডি</span></div>
+      <div class="product-pill"><span class="pp-emoji">🏅</span> Sports Jersey <span class="pp-label">স্পোর্টস জার্সি</span></div>
+      <div class="product-pill"><span class="pp-emoji">🎽</span> Cotton Fabric <span class="pp-label">কটন ফেব্রিক</span></div>
+      <div class="product-pill"><span class="pp-emoji">🏷️</span> Sticker <span class="pp-label">স্টিকার</span></div>
+      <div class="product-pill"><span class="pp-emoji">🎁</span> Custom Gift <span class="pp-label">কাস্টম গিফট</span></div>
+      <div class="product-pill"><span class="pp-emoji">🏢</span> Brand Merch <span class="pp-label">ব্র্যান্ড মার্চ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="process" class="sec-pad">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5 reveal-l">
+        <div class="sec-label">প্রক্রিয়া</div>
+        <h2 class="sec-title">How It <span style="color:var(--accent)">Works</span></h2>
+        <div class="divider"></div>
+        <p class="sec-sub">মাত্র ৪টি সহজ ধাপে আপনার অর্ডার সম্পন্ন — দ্রুত, নির্ভরযোগ্য, ঝামেলামুক্ত।</p>
+      </div>
+      <div class="col-lg-7 reveal-r">
+        <div class="process-line d-flex flex-column gap-3">
+
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div>
+              <h5>যোগাযোগ করুন / Contact Us</h5>
+              <p>WhatsApp-এ মেসেজ করুন বা ফর্ম পূরণ করুন। আপনার প্রয়োজন জানান — product type, quantity, design concept.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div>
+              <h5>ডিজাইন অ্যাপ্রুভাল / Design Approval</h5>
+              <p>Our team creates your custom design mockup. Review, request changes, and approve — no hidden charges for revisions.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div>
+              <h5>প্রিন্টিং শুরু / Production Begins</h5>
+              <p>Upon confirmation, production starts immediately. Premium materials + precision machines = flawless output.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <div>
+              <h5>ডেলিভারি / Delivery</h5>
+              <p>আপনার অর্ডার প্যাক করে দ্রুত পৌঁছে দেওয়া হয়। Fast, safe, and on time — always.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COUNTERS ===== -->
+<section id="counters">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 counter-item reveal">
+        <span class="counter-num counter-animate" data-target="500">0</span><span class="counter-suffix">+</span>
+        <div class="counter-label">Orders Completed</div>
+      </div>
+      <div class="col-6 col-md-3 counter-item reveal" style="transition-delay:.1s">
+        <span class="counter-num counter-animate" data-target="15">0</span><span class="counter-suffix">+</span>
+        <div class="counter-label">Product Categories</div>
+      </div>
+      <div class="col-6 col-md-3 counter-item reveal" style="transition-delay:.2s">
+        <span class="counter-num counter-animate" data-target="100">0</span><span class="counter-suffix">%</span>
+        <div class="counter-label">Client Satisfaction</div>
+      </div>
+      <div class="col-6 col-md-3 counter-item reveal" style="transition-delay:.3s">
+        <span class="counter-num counter-animate" data-target="48">0</span><span class="counter-suffix">hr</span>
+        <div class="counter-label">Avg. Turnaround</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section id="why" class="sec-pad">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label">কেন আমাদের বেছে নেবেন</div>
+      <h2 class="sec-title">Why <span style="color:var(--accent)">HELPYARD-PS?</span></h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 reveal" style="transition-delay:.05s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-brightness-high-fill"></i></div>
+          <div>
+            <h5>উজ্জ্বল ও দীর্ঘস্থায়ী প্রিন্ট</h5>
+            <p>Vivid, wash-resistant prints that stay bold — sublimation, rubber, and vinyl done right every single time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal" style="transition-delay:.1s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-pencil-square"></i></div>
+          <div>
+            <h5>সম্পূর্ণ কাস্টম ডিজাইন</h5>
+            <p>Teams, brands, personal gifts — we craft 100% unique designs tailored to your exact vision and requirements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal" style="transition-delay:.15s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-gem"></i></div>
+          <div>
+            <h5>প্রিমিয়াম উপকরণ</h5>
+            <p>Only top-grade materials and professional-level equipment — প্রতিটি পণ্যে প্রিমিয়াম ফিনিশিং নিশ্চিত।</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal" style="transition-delay:.2s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <div>
+            <h5>দ্রুত ও নির্ভরযোগ্য</h5>
+            <p>Fast turnaround without sacrificing quality. Your deadline is our commitment — always on time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal" style="transition-delay:.25s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-shield-check-fill"></i></div>
+          <div>
+            <h5>বিশ্বস্ত পেশাদার সেবা</h5>
+            <p>Trusted by hundreds of businesses, sports teams, and individuals across Bangladesh since day one.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal" style="transition-delay:.3s">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-chat-heart-fill"></i></div>
+          <div>
+            <h5>সৃজনশীল সহযোগিতা</h5>
+            <p>We don't just execute — we collaborate. Share your idea and our creative team brings it to extraordinary life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="sec-pad">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label">ক্লায়েন্ট রিভিউ</div>
+      <h2 class="sec-title">What Clients <span style="color:var(--accent2)">Say</span></h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="testimonial-track-wrap reveal">
+      <div class="testimonial-track" id="tSlider">
+
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"আমাদের ফুটবল টিমের জার্সি HELPYARD-PS থেকে করেছিলাম। <strong>কোয়ালিটি অসাধারণ</strong> — রং একদম উজ্জ্বল, ওয়াশের পরেও একই থাকে। সবাই জিজ্ঞেস করছে কোথা থেকে বানিয়েছি!"</p>
+          <div class="t-author">
+            <div class="t-avatar">RA</div>
+            <div><div class="t-name">Rafiul Alam</div><div class="t-role">Football Team Captain, Dhaka</div></div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Corporate gift-এর জন্য ceramic mug sublimation করেছিলাম। <strong>Delivery ছিল অনেক দ্রুত</strong> এবং প্রতিটা মগের প্রিন্ট পার্ফেক্ট। Highly recommended for bulk orders!"</p>
+          <div class="t-author">
+            <div class="t-avatar">SM</div>
+            <div><div class="t-name">Sumaiya M.</div><div class="t-role">Marketing Manager, Chittagong</div></div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"T-shirt-এর vinyl print করেছিলাম বিজনেস প্রমোশনের জন্য। <strong>Design একদম আমি যা চেয়েছিলাম তাই হয়েছে</strong> — প্রফেশনাল টিম, দ্রুত কাজ, চমৎকার ফিনিশিং।"</p>
+          <div class="t-author">
+            <div class="t-avatar">TH</div>
+            <div><div class="t-name">Tanvir H.</div><div class="t-role">Small Business Owner, Sylhet</div></div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Ordered custom cushion covers and mouse mats for our office. <strong>Absolutely stunning results</strong> — the sublimation colors are incredibly sharp. Our team loves them!"</p>
+          <div class="t-author">
+            <div class="t-avatar">NI</div>
+            <div><div class="t-name">Nadia Islam</div><div class="t-role">Startup Founder, Dhaka</div></div>
+          </div>
+        </div>
+
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"বিয়ের গিফট হিসেবে কাস্টম টাইলস বানিয়েছিলাম। <strong>এত সুন্দর আউটপুট</strong> পাবো ভাবিনি। সবাই অবাক হয়ে গেছে — সত্যিই প্রিমিয়াম সার্ভিস!"</p>
+          <div class="t-author">
+            <div class="t-avatar">MK</div>
+            <div><div class="t-name">Mehedi K.</div><div class="t-role">Customer, Rajshahi</div></div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Controls -->
+      <div class="slider-arrows">
+        <button class="s-arrow" id="prevBtn"><i class="bi bi-chevron-left"></i></button>
+        <button class="s-arrow" id="nextBtn"><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="sec-pad">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- Visual -->
+      <div class="col-lg-5 reveal-l">
+        <div class="about-visual">
+          <div class="ring-outer">
+            <div class="ring-orbit"><div class="orbit-dot"></div></div>
+            <div class="ring-inner">
+              <div class="ring-label">HY-PS</div>
+              <div class="ring-sub">Est. Bangladesh</div>
+            </div>
+          </div>
+          <div class="float-item fi1"><i class="bi bi-star-fill"></i> Premium Quality</div>
+          <div class="float-item fi2"><i class="bi bi-lightning-fill"></i> দ্রুত ডেলিভারি</div>
+          <div class="float-item fi3"><i class="bi bi-palette-fill"></i> কাস্টম ডিজাইন</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="col-lg-7 reveal-r">
+        <div class="sec-label">আমাদের সম্পর্কে</div>
+        <h2 class="sec-title">About <span style="color:var(--accent)">HELPYARD-PS</span></h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1rem">
+          HELPYARD-PS হলো বাংলাদেশের একটি বিশ্বস্ত প্রিমিয়াম কাস্টম প্রিন্টিং সলিউশন প্রদানকারী। আমরা বিশ্বাস করি প্রতিটি ব্র্যান্ড, দল এবং ব্যক্তি তাদের স্বপ্নকে দৃশ্যমান রূপ দেওয়ার অধিকার রাখে।
+        </p>
+        <div class="about-quote">
+          <strong>"আপনার স্বপ্নকে বাস্তবে পরিণত করাই আমাদের একমাত্র লক্ষ্য।"</strong><br/>
+          From sports jerseys to corporate gifts — precision, creativity, and premium quality in every single print.
+        </div>
+        <p style="color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:1.4rem">
+          স্পোর্টস টিম, কর্পোরেট ব্র্যান্ড বা ব্যক্তিগত কাস্টম গিফট — আমরা সর্বদা সর্বোচ্চ মান নিশ্চিত করি।
+        </p>
+        <div>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> ১০০% কাস্টম</span>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> Professional</span>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> দ্রুত সেবা</span>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> Trusted BD</span>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> Premium Materials</span>
+          <span class="badge-pill"><i class="bi bi-check-circle-fill"></i> নির্ভরযোগ্য</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="sec-pad">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label">যোগাযোগ করুন</div>
+      <h2 class="sec-title">Get In <span style="color:var(--accent)">Touch</span></h2>
+      <div class="divider mx-auto"></div>
+      <p class="sec-sub mx-auto">আজই আমাদের সাথে যোগাযোগ করুন এবং আপনার পরবর্তী প্রজেক্ট শুরু করুন।</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4 reveal" style="transition-delay:.1s">
+        <div class="contact-card">
+          <div class="cc-icon cc-wa"><i class="bi bi-whatsapp"></i></div>
+          <h5>WhatsApp</h5>
+          <div class="cc-bn">হটলাইন · অর্ডার</div>
+          <p>সরাসরি মেসেজ করুন — দ্রুত সাড়া পাবেন। The fastest way to reach us.</p>
+          <a href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="cc-link accent">
+            01773-743025 <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 reveal" style="transition-delay:.2s">
+        <div class="contact-card">
+          <div class="cc-icon cc-em"><i class="bi bi-envelope-fill"></i></div>
+          <h5>Email</h5>
+          <div class="cc-bn">ইমেইলে যোগাযোগ</div>
+          <p>বিস্তারিত প্রজেক্ট ব্রিফ বা অনুসন্ধানের জন্য ইমেইল করুন।</p>
+          <a href="mailto:helpyard@hotmail.com" class="cc-link accent">
+            helpyard@hotmail.com <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 reveal" style="transition-delay:.3s">
+        <div class="contact-card">
+          <div class="cc-icon cc-or"><i class="bi bi-bag-check-fill"></i></div>
+          <h5>Order Now</h5>
+          <div class="cc-bn">এখনই অর্ডার করুন</div>
+          <p>ডিজাইন শেয়ার করুন, পরিমাণ জানান — আমরা বাকিটা সামলাব।</p>
+          <a href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="cc-link" style="color:var(--accent2)">
+            শুরু করুন <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Order Form → WhatsApp -->
+    <div class="row justify-content-center reveal">
+      <div class="col-lg-8">
+        <div class="order-panel">
+          <h3>Quick <span style="color:var(--accent)">Order</span> Form</h3>
+          <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.8rem">ফর্ম পূরণ করুন — সরাসরি WhatsApp-এ পাঠানো হবে। Fill in and we'll receive it instantly.</p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">আপনার নাম / Your Name</label>
+              <input type="text" id="o-name" class="form-control-dark" placeholder="e.g. Rahim Uddin"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">ফোন / Phone</label>
+              <input type="tel" id="o-phone" class="form-control-dark" placeholder="e.g. 01XXXXXXXXX"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">সার্ভিস / Service Type</label>
+              <select id="o-service" class="form-control-dark">
+                <option value="">-- Select Service --</option>
+                <option>Vinyl Plotter - Cotton Fabrics</option>
+                <option>Inject Print - T-shirt / Hoodie</option>
+                <option>Inject Print - Sticker</option>
+                <option>Sublimation - Ceramic Mug</option>
+                <option>Sublimation - Ceramic Tile</option>
+                <option>Sublimation - MDF Coaster</option>
+                <option>Sublimation - Glass Sheet</option>
+                <option>Sublimation - Aluminium Sheet</option>
+                <option>Sublimation - Mouse Mat</option>
+                <option>Sublimation - Cushion Cover</option>
+                <option>Sublimation - Apron</option>
+                <option>Other / আলোচনা করতে চাই</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">পরিমাণ / Quantity</label>
+              <input type="number" id="o-qty" class="form-control-dark" placeholder="e.g. 50" min="1"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label">বিবরণ / Details & Design Idea</label>
+              <textarea id="o-details" class="form-control-dark" placeholder="আপনার ডিজাইনের বিবরণ দিন... Describe your design, colors, text needed, deadline etc."></textarea>
+            </div>
+            <div class="col-12">
+              <button onclick="submitOrderToWhatsApp()" class="btn-primary-glow w-100" style="justify-content:center;font-size:1.05rem">
+                <i class="bi bi-whatsapp"></i> WhatsApp-এ পাঠান / Send via WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner reveal">
+      <h3>আজই <span style="color:var(--accent)">অর্ডার</span> কনফার্ম করুন!</h3>
+      <p>আমাদের পেশাদার প্রিন্টিং-এর মাধ্যমে আপনার ডিজাইনকে সবার থেকে আলাদা করে তুলুন।</p>
+      <a href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-primary-glow" style="display:inline-flex;font-size:1.05rem">
+        <i class="bi bi-whatsapp"></i> Message on WhatsApp Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="footer-brand"><span>HELP</span>YARD-PS</div>
+        <p style="font-size:.83rem;margin-top:.6rem;line-height:1.7;max-width:280px">
+          Bangladesh's premium custom printing studio. আপনার স্বপ্নকে বাস্তবে রূপ দিই।
+        </p>
+        <div style="margin-top:1rem">
+          <a href="https://api.whatsapp.com/send?phone=8801773743025" target="_blank" rel="noopener" class="social-btn"><i class="bi bi-whatsapp"></i></a>
+          <a href="mailto:helpyard@hotmail.com" class="social-btn"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div style="font-weight:700;color:var(--text);margin-bottom:.8rem;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase">Services</div>
+        <div class="footer-links">
+          <a href="#services">Vinyl Plotter</a>
+          <a href="#services">Inject Print</a>
+          <a href="#services">Sublimation Print</a>
+          <a href="#products">All Products</a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div style="font-weight:700;color:var(--text);margin-bottom:.8rem;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase">Links</div>
+        <div class="footer-links">
+          <a href="#process">How It Works</a>
+          <a href="#why">Why Us</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div style="font-weight:700;color:var(--text);margin-bottom:.8rem;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase">Contact</div>
+        <p style="font-size:.83rem;margin-bottom:.4rem"><i class="bi bi-whatsapp me-2" style="color:#25d366"></i>01773-743025</p>
+        <p style="font-size:.83rem;margin-bottom:.4rem"><i class="bi bi-envelope-fill me-2" style="color:var(--accent)"></i>helpyard@hotmail.com</p>
+        <p style="font-size:.83rem"><i class="bi bi-geo-alt-fill me-2" style="color:var(--accent2)"></i>Bangladesh 🇧🇩</p>
+      </div>
+    </div>
+    <hr style="border-color:var(--border);margin:1.5rem 0 1rem"/>
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2" style="font-size:.76rem">
+      <span>© 2025 HELPYARD-PS · All rights reserved · Made with ❤️ in Bangladesh</span>
+      <span style="color:var(--accent)">প্রিমিয়াম কাস্টম প্রিন্টিং সলিউশন</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://api.whatsapp.com/send?phone=8801773743025&text=Hello%20HELPYARD-PS!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us!</span>
+</a>
+
+<!-- Back to top -->
+<a href="#hero" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* ===== LOADER ===== */
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('loader').classList.add('hide'),2400);
+});
+
+/* ===== CUSTOM CURSOR ===== */
+const cur=document.getElementById('cursor'),curR=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function animR(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(animR)})();
+document.querySelectorAll('a,button,.tilt-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='24px';cur.style.height='24px';curR.style.width='52px';curR.style.height='52px'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='14px';cur.style.height='14px';curR.style.width='38px';curR.style.height='38px'});
+});
+
+/* ===== PARTICLES ===== */
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight});
+const particles=[];
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*canvas.width,y:Math.random()*canvas.height,
+    r:Math.random()*1.5+.3,
+    vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
+    a:Math.random()*.6+.2
+  });
+}
+function drawParticles(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(31,198,192,${p.a})`;ctx.fill();
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+    if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
+  });
+  // Connect nearby particles
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){
+        ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.strokeStyle=`rgba(31,198,192,${.12*(1-d/100)})`;ctx.lineWidth=.6;ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+/* ===== NAVBAR ===== */
+const nav=document.getElementById('mainNav');
+const navLinks=document.querySelectorAll('#navCol .nav-link:not(.btn-nav-cta)');
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>500);
+  let cur2='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-110)cur2=s.id});
+  navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur2));
+});
+
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(!t)return;e.preventDefault();
+    const col=document.getElementById('navCol');
+    if(col.classList.contains('show'))bootstrap.Collapse.getInstance(col)?.hide();
+    window.scrollTo({top:t.offsetTop-105,behavior:'smooth'});
+  });
+});
+
+/* ===== SCROLL REVEAL ===== */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:.1});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+
+/* ===== TYPEWRITER ===== */
+const words=['VISION','DESIGN','BRAND','JERSEY','DREAM'];
+let wi=0,ci=0,deleting=false;
+const tw=document.getElementById('typewriter');
+function typeIt(){
+  const w=words[wi];
+  if(!deleting){tw.textContent=w.slice(0,++ci);if(ci===w.length){deleting=true;setTimeout(typeIt,1800);return}}
+  else{tw.textContent=w.slice(0,--ci);if(ci===0){deleting=false;wi=(wi+1)%words.length}}
+  setTimeout(typeIt,deleting?60:110);
+}
+setTimeout(typeIt,1200);
+
+/* ===== COUNTER ANIMATION ===== */
+function animateCounter(el){
+  const target=+el.dataset.target,dur=1800;
+  let start=null;
+  function step(ts){
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/dur,1);
+    el.textContent=Math.floor(p*target);
+    if(p<1)requestAnimationFrame(step);else el.textContent=target;
+  }
+  requestAnimationFrame(step);
+}
+const cObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.counter-animate').forEach(animateCounter);
+      cObs.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+document.querySelectorAll('#counters,#hero').forEach(s=>cObs.observe(s));
+
+/* ===== 3D TILT CARDS ===== */
+document.querySelectorAll('.tilt-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    const rx2=(y-.5)*12,ry2=(x-.5)*-12;
+    card.style.transform=`perspective(600px) rotateX(${rx2}deg) rotateY(${ry2}deg) translateY(-4px)`;
+    card.style.setProperty('--mx',(x*100)+'%');card.style.setProperty('--my',(y*100)+'%');
+  });
+  card.addEventListener('mouseleave',()=>{card.style.transform='';});
+});
+
+/* ===== TESTIMONIAL SLIDER ===== */
+const slider=document.getElementById('tSlider');
+const cards=slider.querySelectorAll('.t-card');
+const dotsWrap=document.getElementById('sliderDots');
+let cIdx=0;
+const visible=()=>window.innerWidth<576?1:window.innerWidth<992?2:3;
+function buildDots(){
+  dotsWrap.innerHTML='';
+  const n=Math.ceil(cards.length/visible());
+  for(let i=0;i<n;i++){
+    const d=document.createElement('button');d.className='s-dot'+(i===0?' active':'');
+    d.onclick=()=>goTo(i);dotsWrap.appendChild(d);
+  }
+}
+function goTo(i){
+  cIdx=i;
+  const w=cards[0].offsetWidth+24;
+  slider.style.transform=`translateX(-${cIdx*visible()*w}px)`;
+  dotsWrap.querySelectorAll('.s-dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+}
+document.getElementById('nextBtn').onclick=()=>{const max=Math.ceil(cards.length/visible())-1;goTo(cIdx<max?cIdx+1:0)};
+document.getElementById('prevBtn').onclick=()=>{const max=Math.ceil(cards.length/visible())-1;goTo(cIdx>0?cIdx-1:max)};
+buildDots();
+window.addEventListener('resize',()=>{buildDots();goTo(0)});
+setInterval(()=>{const max=Math.ceil(cards.length/visible())-1;goTo(cIdx<max?cIdx+1:0)},5000);
+
+/* ===== QUICK ORDER → WHATSAPP ===== */
+function submitOrderToWhatsApp(){
+  const name=document.getElementById('o-name').value.trim();
+  const phone=document.getElementById('o-phone').value.trim();
+  const service=document.getElementById('o-service').value;
+  const qty=document.getElementById('o-qty').value;
+  const details=document.getElementById('o-details').value.trim();
+  if(!name||!service){alert('অনুগ্রহ করে নাম ও সার্ভিস টাইপ লিখুন। Please fill name and service.');return;}
+  const msg=`🔥 *নতুন অর্ডার — HELPYARD-PS*\n\n👤 *নাম:* ${name}\n📞 *ফোন:* ${phone||'N/A'}\n🖨️ *Service:* ${service}\n📦 *Quantity:* ${qty||'N/A'}\n📝 *Details:* ${details||'N/A'}\n\n_Sent via helpyard-ps.com_`;
+  const url='https://api.whatsapp.com/send?phone=8801773743025&text='+encodeURIComponent(msg);
+  window.open(url,'_blank');
+}
+</script>
+</body>
+</html>
